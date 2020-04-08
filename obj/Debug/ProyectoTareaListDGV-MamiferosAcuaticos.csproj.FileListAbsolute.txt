@@ -1,0 +1,9 @@
+C:\Users\Familia Loaiza\source\repos\ProyectoTareaListDGV-MamiferosAcuaticos\bin\Debug\ProyectoTareaListDGV-MamiferosAcuaticos.exe.config
+C:\Users\Familia Loaiza\source\repos\ProyectoTareaListDGV-MamiferosAcuaticos\bin\Debug\ProyectoTareaListDGV-MamiferosAcuaticos.exe
+C:\Users\Familia Loaiza\source\repos\ProyectoTareaListDGV-MamiferosAcuaticos\bin\Debug\ProyectoTareaListDGV-MamiferosAcuaticos.pdb
+C:\Users\Familia Loaiza\source\repos\ProyectoTareaListDGV-MamiferosAcuaticos\obj\Debug\ProyectoTareaListDGV-MamiferosAcuaticos.csprojAssemblyReference.cache
+C:\Users\Familia Loaiza\source\repos\ProyectoTareaListDGV-MamiferosAcuaticos\obj\Debug\ProyectoTareaListDGV_MamiferosAcuaticos.Form1.resources
+C:\Users\Familia Loaiza\source\repos\ProyectoTareaListDGV-MamiferosAcuaticos\obj\Debug\ProyectoTareaListDGV_MamiferosAcuaticos.Properties.Resources.resources
+C:\Users\Familia Loaiza\source\repos\ProyectoTareaListDGV-MamiferosAcuaticos\obj\Debug\ProyectoTareaListDGV-MamiferosAcuaticos.csproj.GenerateResource.cache
+C:\Users\Familia Loaiza\source\repos\ProyectoTareaListDGV-MamiferosAcuaticos\obj\Debug\ProyectoTareaListDGV-MamiferosAcuaticos.exe
+C:\Users\Familia Loaiza\source\repos\ProyectoTareaListDGV-MamiferosAcuaticos\obj\Debug\ProyectoTareaListDGV-MamiferosAcuaticos.pdb
