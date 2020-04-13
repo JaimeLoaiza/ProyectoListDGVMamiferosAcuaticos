@@ -21,7 +21,7 @@ namespace ProyectoTareaListDGV_MamiferosAcuaticos
         }
         public MamiferosAcuaticos()
         {
-            Id = 0;
+            id = 0;
             nombre = string.Empty;
             especie = string.Empty;
             localizacion = string.Empty;

@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbltitulo = new System.Windows.Forms.Label();
-            this.lblid = new System.Windows.Forms.Label();
             this.lblnombre = new System.Windows.Forms.Label();
             this.lblespecie = new System.Windows.Forms.Label();
             this.lbllocalizacion = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.txtespecie = new System.Windows.Forms.TextBox();
             this.txtlocalizacion = new System.Windows.Forms.TextBox();
@@ -43,6 +42,8 @@
             this.btneliminarregistro = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
             this.DGVmamiferosacuaticos = new System.Windows.Forms.DataGridView();
+            this.lblid = new System.Windows.Forms.Label();
+            this.txtid = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVmamiferosacuaticos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,16 +56,6 @@
             this.lbltitulo.Size = new System.Drawing.Size(630, 26);
             this.lbltitulo.TabIndex = 0;
             this.lbltitulo.Text = "REGISTRO DE MAMIFEROS ACUATICOS EN TODO EL PLANETA";
-            // 
-            // lblid
-            // 
-            this.lblid.AutoSize = true;
-            this.lblid.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblid.Location = new System.Drawing.Point(74, 76);
-            this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(23, 17);
-            this.lblid.TabIndex = 1;
-            this.lblid.Text = "ID";
             // 
             // lblnombre
             // 
@@ -95,13 +86,6 @@
             this.lbllocalizacion.Size = new System.Drawing.Size(108, 17);
             this.lbllocalizacion.TabIndex = 6;
             this.lbllocalizacion.Text = "LOCALIZACIÓN";
-            // 
-            // txtid
-            // 
-            this.txtid.Location = new System.Drawing.Point(35, 104);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(100, 20);
-            this.txtid.TabIndex = 7;
             // 
             // txtnombre
             // 
@@ -134,6 +118,7 @@
             this.btnnuevoregistro.TabIndex = 13;
             this.btnnuevoregistro.Text = "NUEVO REGISTRO";
             this.btnnuevoregistro.UseVisualStyleBackColor = true;
+            this.btnnuevoregistro.Click += new System.EventHandler(this.btnnuevoregistro_Click);
             // 
             // btnagregarregistro
             // 
@@ -157,6 +142,7 @@
             this.btnmodificarregistro.TabIndex = 15;
             this.btnmodificarregistro.Text = "MODIFICAR REGISTRO";
             this.btnmodificarregistro.UseVisualStyleBackColor = true;
+            this.btnmodificarregistro.Click += new System.EventHandler(this.btnmodificarregistro_Click);
             // 
             // btneliminarregistro
             // 
@@ -182,11 +168,39 @@
             // 
             // DGVmamiferosacuaticos
             // 
+            this.DGVmamiferosacuaticos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DGVmamiferosacuaticos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVmamiferosacuaticos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.DGVmamiferosacuaticos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVmamiferosacuaticos.Location = new System.Drawing.Point(26, 195);
             this.DGVmamiferosacuaticos.Name = "DGVmamiferosacuaticos";
             this.DGVmamiferosacuaticos.Size = new System.Drawing.Size(639, 279);
             this.DGVmamiferosacuaticos.TabIndex = 18;
+            this.DGVmamiferosacuaticos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVmamiferosacuaticos_CellClick);
+            // 
+            // lblid
+            // 
+            this.lblid.AutoSize = true;
+            this.lblid.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblid.Location = new System.Drawing.Point(74, 76);
+            this.lblid.Name = "lblid";
+            this.lblid.Size = new System.Drawing.Size(23, 17);
+            this.lblid.TabIndex = 1;
+            this.lblid.Text = "ID";
+            // 
+            // txtid
+            // 
+            this.txtid.Location = new System.Drawing.Point(35, 104);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(100, 20);
+            this.txtid.TabIndex = 7;
             // 
             // Form1
             // 
@@ -220,11 +234,9 @@
         #endregion
 
         private System.Windows.Forms.Label lbltitulo;
-        private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.Label lblnombre;
         private System.Windows.Forms.Label lblespecie;
         private System.Windows.Forms.Label lbllocalizacion;
-        private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.TextBox txtespecie;
         private System.Windows.Forms.TextBox txtlocalizacion;
@@ -234,6 +246,8 @@
         private System.Windows.Forms.Button btneliminarregistro;
         private System.Windows.Forms.Button btnsalir;
         private System.Windows.Forms.DataGridView DGVmamiferosacuaticos;
+        private System.Windows.Forms.Label lblid;
+        private System.Windows.Forms.TextBox txtid;
     }
 }
 
