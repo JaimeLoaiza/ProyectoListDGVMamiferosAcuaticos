@@ -12,24 +12,17 @@ namespace ProyectoTareaListDGV_MamiferosAcuaticos
         private string nombre;
         private string especie;
         private string localizacion;
-        public MamiferosAcuaticos(int id, string nom, string esp, string loc)
+        public MamiferosAcuaticos(string nom, string esp, string loc)
         {
-            Id = id;
             nombre = nom;
             especie = esp;
             localizacion = loc;
         }
         public MamiferosAcuaticos()
         {
-            id = 0;
             nombre = string.Empty;
             especie = string.Empty;
             localizacion = string.Empty;
-        }
-        public int id
-        {
-            get { return Id; }
-            set { Id = value; }
         }
         public String Nombre
         {

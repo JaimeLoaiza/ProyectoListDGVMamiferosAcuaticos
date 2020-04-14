@@ -12,7 +12,7 @@ namespace ProyectoTareaListDGV_MamiferosAcuaticos
 {
     public partial class Form1 : Form
     {
-        int i;
+        int i = 1;
         public Form1()
         {
             InitializeComponent();
@@ -27,14 +27,13 @@ namespace ProyectoTareaListDGV_MamiferosAcuaticos
         {
             btnmodificarregistro.Enabled = false;
             btneliminarregistro.Enabled = false;
-            txtid.Text = "";
             txtnombre.Text = "";
             txtespecie.Text = "";
             txtlocalizacion.Text = "";
         }
         public void agregarregistro()
         {
-            MamiferosAcuaticos mamifero1 = new MamiferosAcuaticos(int.Parse(txtid.Text), txtnombre.Text, txtespecie.Text, txtlocalizacion.Text);
+            MamiferosAcuaticos mamifero1 = new MamiferosAcuaticos(txtnombre.Text, txtespecie.Text, txtlocalizacion.Text);
             ListaDGVMamiferosacuaticos.Add(mamifero1);
             DGVmamiferosacuaticos.DataSource = null;
             DGVmamiferosacuaticos.DataSource = ListaDGVMamiferosacuaticos;
@@ -42,11 +41,6 @@ namespace ProyectoTareaListDGV_MamiferosAcuaticos
         private void btnagregarregistro_Click(object sender, EventArgs e)
         {
             agregarregistro();
-            string nombre, especie, localizacion;
-            nombre = txtnombre.Text;
-            especie = txtnombre.Text;
-            localizacion = txtnombre.Text;
-            DGVmamiferosacuaticos.Rows.Add(i + "", nombre, especie, localizacion);
             i = i + 1;
             limpiar();
         }
@@ -75,6 +69,10 @@ namespace ProyectoTareaListDGV_MamiferosAcuaticos
             DGVmamiferosacuaticos[2, posicion].Value = txtespecie.Text;
             DGVmamiferosacuaticos[3, posicion].Value = txtlocalizacion.Text;
             limpiar();
+        }
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
