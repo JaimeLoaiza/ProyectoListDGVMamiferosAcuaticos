@@ -42,7 +42,12 @@
             this.btneliminarregistro = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
             this.DGVmamiferosacuaticos = new System.Windows.Forms.DataGridView();
+            this.lblid = new System.Windows.Forms.Label();
+            this.txtid = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ESPECIE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LOCALIZACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVmamiferosacuaticos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +65,7 @@
             // 
             this.lblnombre.AutoSize = true;
             this.lblnombre.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombre.Location = new System.Drawing.Point(181, 76);
+            this.lblnombre.Location = new System.Drawing.Point(252, 75);
             this.lblnombre.Name = "lblnombre";
             this.lblnombre.Size = new System.Drawing.Size(64, 17);
             this.lblnombre.TabIndex = 2;
@@ -70,7 +75,7 @@
             // 
             this.lblespecie.AutoSize = true;
             this.lblespecie.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblespecie.Location = new System.Drawing.Point(312, 76);
+            this.lblespecie.Location = new System.Drawing.Point(383, 75);
             this.lblespecie.Name = "lblespecie";
             this.lblespecie.Size = new System.Drawing.Size(58, 17);
             this.lblespecie.TabIndex = 3;
@@ -80,7 +85,7 @@
             // 
             this.lbllocalizacion.AutoSize = true;
             this.lbllocalizacion.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbllocalizacion.Location = new System.Drawing.Point(423, 76);
+            this.lbllocalizacion.Location = new System.Drawing.Point(494, 75);
             this.lbllocalizacion.Name = "lbllocalizacion";
             this.lbllocalizacion.Size = new System.Drawing.Size(108, 17);
             this.lbllocalizacion.TabIndex = 6;
@@ -88,21 +93,21 @@
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(149, 104);
+            this.txtnombre.Location = new System.Drawing.Point(220, 103);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(127, 20);
             this.txtnombre.TabIndex = 8;
             // 
             // txtespecie
             // 
-            this.txtespecie.Location = new System.Drawing.Point(282, 104);
+            this.txtespecie.Location = new System.Drawing.Point(353, 103);
             this.txtespecie.Name = "txtespecie";
             this.txtespecie.Size = new System.Drawing.Size(127, 20);
             this.txtespecie.TabIndex = 9;
             // 
             // txtlocalizacion
             // 
-            this.txtlocalizacion.Location = new System.Drawing.Point(415, 104);
+            this.txtlocalizacion.Location = new System.Drawing.Point(486, 103);
             this.txtlocalizacion.Name = "txtlocalizacion";
             this.txtlocalizacion.Size = new System.Drawing.Size(127, 20);
             this.txtlocalizacion.TabIndex = 12;
@@ -153,6 +158,7 @@
             this.btneliminarregistro.TabIndex = 16;
             this.btneliminarregistro.Text = "ELIMINAR REGISTRO";
             this.btneliminarregistro.UseVisualStyleBackColor = true;
+            this.btneliminarregistro.Click += new System.EventHandler(this.btneliminarregistro_Click);
             // 
             // btnsalir
             // 
@@ -180,23 +186,60 @@
             this.DGVmamiferosacuaticos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVmamiferosacuaticos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVmamiferosacuaticos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID});
+            this.ID,
+            this.NOMBRE,
+            this.ESPECIE,
+            this.LOCALIZACION});
             this.DGVmamiferosacuaticos.Location = new System.Drawing.Point(26, 195);
             this.DGVmamiferosacuaticos.Name = "DGVmamiferosacuaticos";
             this.DGVmamiferosacuaticos.Size = new System.Drawing.Size(639, 279);
             this.DGVmamiferosacuaticos.TabIndex = 18;
             this.DGVmamiferosacuaticos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVmamiferosacuaticos_CellClick);
             // 
+            // lblid
+            // 
+            this.lblid.AutoSize = true;
+            this.lblid.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblid.Location = new System.Drawing.Point(137, 75);
+            this.lblid.Name = "lblid";
+            this.lblid.Size = new System.Drawing.Size(23, 17);
+            this.lblid.TabIndex = 19;
+            this.lblid.Text = "ID";
+            // 
+            // txtid
+            // 
+            this.txtid.Location = new System.Drawing.Point(87, 103);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(127, 20);
+            this.txtid.TabIndex = 20;
+            // 
             // ID
             // 
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            // 
+            // NOMBRE
+            // 
+            this.NOMBRE.HeaderText = "NOMBRE";
+            this.NOMBRE.Name = "NOMBRE";
+            // 
+            // ESPECIE
+            // 
+            this.ESPECIE.HeaderText = "ESPECIE";
+            this.ESPECIE.Name = "ESPECIE";
+            // 
+            // LOCALIZACION
+            // 
+            this.LOCALIZACION.HeaderText = "LOCALIZACION";
+            this.LOCALIZACION.Name = "LOCALIZACION";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(695, 523);
+            this.Controls.Add(this.txtid);
+            this.Controls.Add(this.lblid);
             this.Controls.Add(this.DGVmamiferosacuaticos);
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.btneliminarregistro);
@@ -234,7 +277,12 @@
         private System.Windows.Forms.Button btneliminarregistro;
         private System.Windows.Forms.Button btnsalir;
         private System.Windows.Forms.DataGridView DGVmamiferosacuaticos;
+        private System.Windows.Forms.Label lblid;
+        private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ESPECIE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LOCALIZACION;
     }
 }
 
