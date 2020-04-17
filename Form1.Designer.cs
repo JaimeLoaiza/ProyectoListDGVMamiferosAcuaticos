@@ -44,10 +44,6 @@
             this.DGVmamiferosacuaticos = new System.Windows.Forms.DataGridView();
             this.lblid = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ESPECIE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LOCALIZACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVmamiferosacuaticos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -185,11 +181,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DGVmamiferosacuaticos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVmamiferosacuaticos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVmamiferosacuaticos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.NOMBRE,
-            this.ESPECIE,
-            this.LOCALIZACION});
             this.DGVmamiferosacuaticos.Location = new System.Drawing.Point(26, 195);
             this.DGVmamiferosacuaticos.Name = "DGVmamiferosacuaticos";
             this.DGVmamiferosacuaticos.Size = new System.Drawing.Size(639, 279);
@@ -212,26 +203,6 @@
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(127, 20);
             this.txtid.TabIndex = 20;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // NOMBRE
-            // 
-            this.NOMBRE.HeaderText = "NOMBRE";
-            this.NOMBRE.Name = "NOMBRE";
-            // 
-            // ESPECIE
-            // 
-            this.ESPECIE.HeaderText = "ESPECIE";
-            this.ESPECIE.Name = "ESPECIE";
-            // 
-            // LOCALIZACION
-            // 
-            this.LOCALIZACION.HeaderText = "LOCALIZACION";
-            this.LOCALIZACION.Name = "LOCALIZACION";
             // 
             // Form1
             // 
@@ -279,10 +250,6 @@
         private System.Windows.Forms.DataGridView DGVmamiferosacuaticos;
         private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ESPECIE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LOCALIZACION;
     }
 }
 

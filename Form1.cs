@@ -12,7 +12,6 @@ namespace ProyectoTareaListDGV_MamiferosAcuaticos
 {
     public partial class Form1 : Form
     {
-        int i = 1;
         public Form1()
         {
             InitializeComponent();
@@ -35,19 +34,11 @@ namespace ProyectoTareaListDGV_MamiferosAcuaticos
         {
             MamiferosAcuaticos mamifero1 = new MamiferosAcuaticos(int.Parse(txtid.Text), txtnombre.Text, txtespecie.Text, txtlocalizacion.Text);
             ListaDGVMamiferosacuaticos.Add(mamifero1);
-            DGVmamiferosacuaticos.DataSource = null;
+            DGVmamiferosacuaticos.DataSource = 0;
             DGVmamiferosacuaticos.DataSource = ListaDGVMamiferosacuaticos;
         }
         private void btnagregarregistro_Click(object sender, EventArgs e)
         {
-            int id;
-            string nombre, especie, localizacion;
-            id = int.Parse(txtid.Text);
-            nombre = txtnombre.Text;
-            especie = txtespecie.Text;
-            localizacion = txtlocalizacion.Text;
-            DGVmamiferosacuaticos.Rows.Add(i + "", nombre, especie, localizacion);
-            i = i + 1;
             agregarregistro();
             limpiar();
             txtid.Focus();
@@ -91,7 +82,7 @@ namespace ProyectoTareaListDGV_MamiferosAcuaticos
         }
         private void btneliminarregistro_Click(object sender, EventArgs e)
         {
-            DGVmamiferosacuaticos.Rows.RemoveAt(posicion);
+
             MessageBox.Show("EL CAMPO SELECCIONADO FUE ELIMINADO EXITOSAMENTE");
         }
     }
